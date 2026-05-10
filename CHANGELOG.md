@@ -30,21 +30,21 @@
 - Conditions on a particular trig can be cleared with TRIG + FUNC + CLEAR. Clearing param locks remains accessible with TRIG + CLEAR.
 - Removing a trig clears its condition.
 - COPY MELODY action also includes trig condition data.
-- You can clear all condition data in the currently selected track via FUNC + CLEAR (held) > COND
 
 #### PER-TRACK LOOP LENGTH & SPEED
 - The SCALE SETUP menu is now split into the PATTERN SETUP or TRACK SETUP menu.
 - The PATTERN SETUP menu is accessible while REC is off, and the TRACK SETUP menu is accessible while REC is on.
 - In TRACK SETUP, you can set the currently selected track's loop length anywhere from 2 steps to 64 steps, and set the track's speed (1x, 3/4x, 3/2x, 2x), including new slower speeds (1/2x, 1/4x, 1/8x).
 - In PATTERN SETUP, you will find WRAP AFTER and CHAIN AFTER.
-- WRAP AFTER controls after how many steps track loops are reset back to step 1. It can be set to anywhere from 2 steps to 1024 steps, to INF steps (no wrapping), 'TRACK' (wrap at the end of the longest track's loop, factoring in speed too), and 'GLOBAL' (use the GLOBAL PATTERN SETUP's WRAP AFTER setting - accessible via GLOBAL > SEQ > PATTERN SETUP).
+- WRAP AFTER controls after how many steps track loops are reset back to step 1. It can be set to anywhere from 2 steps to 1024 steps, to INF steps (no wrapping), 'TRACK' (wrap at the end of the longest track's loop, factoring in speed too), and 'GLOBAL' (use the GLOBAL PATTERN SETUP's WRAP AFTER setting - accessible via GLOBAL > SEQ > PATTERN SETUP). You can quickly move through these values with FUNC + LEV.
 - CHAIN AFTER controls at what interval the currently playing pattern is permitted to transition to another pattern. For example, if you set CHAIN AFTER to 16 steps, pressed play, and then queued up a pattern change - the transition to that pattern would occur at the next 16 step interval. You can set CHAIN AFTER anywhere from 2 to 64 steps, as well as 'TRACK' (transition at intervals equal to the length of the longest track's loop, factoring in its speed too), and 'GLOBAL' (use the GLOBAL PATTERN SETUP's CHAIN AFTER setting - accessible via GLOBAL > SEQ > PATTERN SETUP).
-- On first initialisation/migration, untouched pattern track lengths are seeded from the pattern's existing stock scale length, and speed follows the stock pattern speed
-- While the TRACK SETUP window is open, PAGE + COPY / PASTE can copy TRACK loop settings to other tracks. If you paste track settings while on the PATTERN SETUP window, it will apply those settings to all tracks at once. PAGE + CLEAR resets track(s) to 16/16, 1x.
+- On first initialisation/migration, untouched pattern track lengths are seeded from the pattern's existing stock scale length, and speed follows the stock pattern speed.
+- While the TRACK SETUP window is open, PAGE + COPY / PASTE can copy TRACK loop settings to other tracks. PAGE + CLEAR resets the track to 16/16, 1x.
+- While the PATTERN SETUP window is open, pasting track settings (PAGE + PASTE) will apply those settings to all tracks at once. PAGE + CLEAR will clear all track settings.
 - By default, WRAP AFTER and CHAIN AFTER are both set to GLOBAL, and the global WRAP AFTER and CHAIN AFTER are set to INF and TRACK respectively.
 
 #### SYSEX BACKUPS
-- To maintain compatibility with vanilla pattern & kit backups, the extended data (currently conditions, per-track loop settings, pattern settings, and some additional global settings) are backed up & restored separately to other SysEx messages. You can make dump requests for this data using the following new SysEx commands:
+- To maintain compatibility with stock pattern & kit backups, the extended data is backed up & restored as separate messages, using separate SysEx commands. You can make dump requests for this data using the following new SysEx commands:
 
 ```
 Ext data commands:
