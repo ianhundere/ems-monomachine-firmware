@@ -18,6 +18,7 @@
 - Added pattern-start SysEx event: `F0 00 20 3C 03 00 73 <pattern_idx> F7`
 - Attempted to fix a rare bug where a track's pitch gets stuck higher than it should be after a pattern change, possibly due to a stale transpose value
 - Removed animated boot splash
+- Inherits additions from MNMX X.01A firmware, including the kit workspace SysEx command and CC out on track muting
 
 #### TRIG CONDITIONS
 - Conditions are accessible by holding a trig, found to the right of the base note of a trig, beneath the piano UI in the bottom left. The condition can then be changed by turning LEV.
