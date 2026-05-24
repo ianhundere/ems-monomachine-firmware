@@ -11,3 +11,9 @@ If you're doing SysEx backups, be sure to verify them afterwards, either by send
 In this firmware, SONG slots 13-24 are removed to make room for extended data. If you have anything on those slots, back them up first (GLOBAL > FILE > SYSEX SEND > SONG+P+K / 013-024), or move them to slots 1-12. **Any SONG data remaining in slots 13-24 WILL become corrupted on boot**. Existing SNAPSHOT data stored on the +DRIVE is preserved, as long as you don't overwrite it while the custom firmware is installed.
 
 To install the firmware, turn on your Monomachine while holding FUNC, and select option 5. Send the firmware syx via the device's MIDI IN port.
+
+# BUG REPORTS
+
+Please feel free to [open issues](https://github.com/emuyia/ems-monomachine-firmware/issues/new?template=bug_report.md) for any bugs you find. Alternatively you can leave a message in the #custom-firmware channel of the [MnM Gang](https://discord.gg/s9Bwh2RnX) discord server.
+
+Make sure to mention which firmware version you are using. It would also be great to provide steps to reproduce the issue, if possible.
