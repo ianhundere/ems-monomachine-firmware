@@ -1,19 +1,12 @@
 # MANDATORY READING
 
-**Please backup your projects before updating!** This is a WIP custom firmware, and there are probably going to be a lot of bugs, regressions etc. and your project data *could* be put at risk.
+1. ****Please backup your projects before updating.**** This custom firmware is a work in progress, so there will be bugs, regressions, etc. and your project data could be put at risk.
 
-If you're using a beta build, please keep in mind that **BETA = BETA**. Beta builds may contain destructive changes from build to build. I strongly recommend against working on anything critical on beta builds. If you want to live on the edge, please be especially vigilant about reading the changelog before updating, and back up your data!
+2. ****Beta builds may contain destructive changes from build to build.**** Therefore I strongly recommend against working on anything critical on beta builds. If you want to live on the edge, please carefully read the [changelog](CHANGELOG.md) before each update.
 
-You can make backups either by saving snapshots if you have a +DRIVE (GLOBAL > FILE > SNAPSHOTS > SAVE), or better yet, by making SysEx backups (GLOBAL > FILE > SYSEX SEND).
-
-If you're doing SysEx backups, be sure to verify them afterwards, either by sending them back via GLOBAL > FILE > SYSEX RECV > VERF, or by using Elektron C6 (check for any 'broken' messages at the bottom of the window).
-
-In this firmware, SONG slots 13-24 are removed to make room for extended data. If you have anything on those slots, back them up first (GLOBAL > FILE > SYSEX SEND > SONG+P+K / 013-024), or move them to slots 1-12. **Any SONG data remaining in slots 13-24 WILL become corrupted on boot**. Existing SNAPSHOT data stored on the +DRIVE is preserved, as long as you don't overwrite it while the custom firmware is installed.
-
-To install the firmware, turn on your Monomachine while holding FUNC, and select option 5. Send the firmware syx via the device's MIDI IN port.
+3. ****SONG slots 13-24 have been removed to make room for extended data.**** If you have anything on those slots, back them up first, or move them to slots 1-12. Any SONG data remaining in slots 13-24 ****will become corrupted on boot****. Snapshot data stored on the +DRIVE is preserved, as long as you don't overwrite it while the custom firmware is installed.
 
 # BUG REPORTS
 
-Please feel free to [open issues](https://github.com/emuyia/ems-monomachine-firmware/issues/new?template=bug_report.md) for any bugs you find. Alternatively you can leave a message in the #custom-firmware channel of the [MnM Gang](https://discord.gg/s9Bwh2RnX) discord server.
+If you find a bug, please [open an issue](../../issues/new?template=bug_report.md) for it. Make sure to mention which firmware version you are using. It would also be great to provide steps to reproduce the issue, if known.
 
-Make sure to mention which firmware version you are using. It would also be great to provide steps to reproduce the issue, if possible.
