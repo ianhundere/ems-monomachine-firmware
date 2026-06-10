@@ -2,8 +2,8 @@
 name: Bug report
 about: Bug report template
 title: ''
-labels: ''
-assignees: ''
+labels: bug
+assignees: emuyia
 
 ---
 
@@ -14,7 +14,4 @@ For example, `26512-beta`.
 A clear description of what the bug is.
 
 **Steps to reproduce, if known**
-- Go to ...
-- Enable ...
-- Press ...
-- etc.
+Go to X, enable Y, press Z... etc.
